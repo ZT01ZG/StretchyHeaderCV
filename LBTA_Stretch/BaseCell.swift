@@ -15,7 +15,11 @@ class BaseCell: UICollectionViewCell {
 	}
 
 	func setupViews() {
-		backgroundColor = UIColor.red
+		backgroundColor = UIColor.clear
+		layer.borderColor = UIColor.green.cgColor
+		layer.borderWidth = 3
+		clipsToBounds = true
+		layer.cornerRadius = self.frame.width / 8
 
 	}
 

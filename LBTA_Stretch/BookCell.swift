@@ -20,10 +20,5 @@ class BookCell: BaseCell {
 
 	override func setupViews() {
 		super.setupViews()
-		backgroundColor = UIColor.lightGray
-		layer.borderColor = UIColor.green.cgColor
-		layer.borderWidth = 3
-		clipsToBounds = true
-		layer.cornerRadius = self.frame.width / 8
 	}
 }
