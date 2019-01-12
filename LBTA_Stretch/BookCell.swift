@@ -21,4 +21,6 @@ class BookCell: BaseCell {
 	override func setupViews() {
 		super.setupViews()
 	}
+
+	
 }

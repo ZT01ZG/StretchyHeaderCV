@@ -38,7 +38,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
 		collectionView.contentInsetAdjustmentBehavior = .never
 		collectionView.register(BookCell.self, forCellWithReuseIdentifier: cellID)
 		collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
-		collectionView.backgroundColor = UIColor.darkGray
+		collectionView.backgroundColor = UIColor(hex: 0xF7F8F9)
 	}
 
 	private func setupNavBar() {
@@ -53,7 +53,6 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
 
 	override func scrollViewDidScroll(_ scrollView: UIScrollView) {
 		let contentOffsetY = scrollView.contentOffset.y
-		print(contentOffsetY)
 
 		if contentOffsetY > 0 {
 			headerView?.animator.fractionComplete = 0
@@ -61,7 +60,6 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
 		}
 
 		headerView?.animator.fractionComplete = abs(contentOffsetY) / 100
-
 	}
 
 	var headerView: HeaderView?
