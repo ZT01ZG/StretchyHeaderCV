@@ -3,9 +3,10 @@ import UIKit
 class SPXImageView: UIImageView {
 	required init() {
 		super.init(frame: .zero)
-		backgroundColor = UIColor.red
+//		backgroundColor = UIColor.red
 		translatesAutoresizingMaskIntoConstraints = false
 		clipsToBounds = true
+		contentMode = .scaleAspectFit
 
 	}
 

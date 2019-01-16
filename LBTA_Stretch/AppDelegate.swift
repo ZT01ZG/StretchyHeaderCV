@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		let layout = UICollectionViewFlowLayout()
 		let stretchLayout = StretchyHeaderLayout()
 		let library = CollectionViewController(collectionViewLayout: stretchLayout)
-//		let homeScreen = UINavigationController(rootViewController: library)
+		let homeScreen = UINavigationController(rootViewController: library)
 
 		window?.rootViewController = library
 		return true
