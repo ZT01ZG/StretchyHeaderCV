@@ -51,8 +51,10 @@ class BookCell: BaseCell {
 	}()
 
 	let bookStatus: SPXButton = {
-		let btn = SPXButton(title: "Available", color: UIColor(hex: 0x07BEB8))
-		btn.titleLabel?.font = UIFont(name: Fonts.avenirNextMediumItalic, size: 13)
+//		let btn = SPXButton(title: "Available", color: UIColor(hex: 0x07BEB8))
+		let btn = SPXButton(title: "Unavailable", color: UIColor.lightGray)
+		btn.titleLabel?.textColor = UIColor.black
+		btn.titleLabel?.font = UIFont(name: Fonts.avenirNextMedium, size: 13)
 		btn.layer.borderColor = UIColor.clear.cgColor
 		return btn
 	}()
@@ -85,7 +87,7 @@ class BookCell: BaseCell {
 
 		addSubview(bookInfoStack)
 
-		let arrayOfBookInfo = [bookMainTitle, bookSubtitle, bookAuthor, bookStatus, bookDetails, spacer]
+		let arrayOfBookInfo = [bookMainTitle, bookSubtitle, bookAuthor, bookDetails, bookStatus, spacer]
 
 		arrayOfBookInfo.forEach {
 			bookInfoStack.addArrangedSubview($0)
