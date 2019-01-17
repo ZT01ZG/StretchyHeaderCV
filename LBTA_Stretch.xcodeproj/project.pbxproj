@@ -31,6 +31,7 @@
 		925DFB3321E93EBB001759C6 /* StretchyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DFB3221E93EBB001759C6 /* StretchyHeaderLayout.swift */; };
 		927FB2CB21EA7E3A007C885C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 927FB2CA21EA7E3A007C885C /* Assets.xcassets */; };
 		927FB2CF21EAA054007C885C /* ScaledHeightImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927FB2CE21EAA054007C885C /* ScaledHeightImageView.swift */; };
+		92CF527921F1121F00143590 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CF527821F1121F00143590 /* FooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		925DFB3221E93EBB001759C6 /* StretchyHeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderLayout.swift; sourceTree = "<group>"; };
 		927FB2CA21EA7E3A007C885C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		927FB2CE21EAA054007C885C /* ScaledHeightImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledHeightImageView.swift; sourceTree = "<group>"; };
+		92CF527821F1121F00143590 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				925DFB1021E91F15001759C6 /* BookCell.swift */,
 				927FB2CE21EAA054007C885C /* ScaledHeightImageView.swift */,
 				925DFB3021E9279F001759C6 /* HeaderView.swift */,
+				92CF527821F1121F00143590 /* FooterView.swift */,
 				925DFAFA21E91534001759C6 /* ViewController.swift */,
 				925DFB0121E91536001759C6 /* LaunchScreen.storyboard */,
 				925DFB0421E91536001759C6 /* Info.plist */,
@@ -270,6 +273,7 @@
 				925DFB1121E91F15001759C6 /* BookCell.swift in Sources */,
 				925DFB2221E91FCB001759C6 /* Constants.swift in Sources */,
 				925DFB2621E91FCB001759C6 /* SPXTableViewCell.swift in Sources */,
+				92CF527921F1121F00143590 /* FooterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

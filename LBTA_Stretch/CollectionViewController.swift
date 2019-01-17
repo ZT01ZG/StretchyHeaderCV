@@ -22,6 +22,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
 
 	fileprivate let cellID: String = "cellID"
 	fileprivate let headerID: String = "headerID"
+	fileprivate let footerID: String = "footerID"
 
 	fileprivate let padding: CGFloat = 16
 
@@ -47,6 +48,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
 		collectionView.contentInsetAdjustmentBehavior = .never
 		collectionView.register(BookCell.self, forCellWithReuseIdentifier: cellID)
 		collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
+		collectionView.register(FooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: footerID)
 		collectionView.backgroundColor = UIColor(hex: 0xF7F8F9)
 	}
 
@@ -72,14 +74,28 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
 	}
 
 	var headerView: HeaderView?
+	var footerView: FooterView?
 
 	override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-		headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerID, for: indexPath) as? HeaderView
-		return headerView!
+
+
+		switch kind {
+		case UICollectionView.elementKindSectionHeader:
+			headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerID, for: indexPath) as? HeaderView
+			return headerView!
+		case UICollectionView.elementKindSectionFooter:
+			footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerID, for: indexPath) as? FooterView
+			return footerView!
+		default: assert(false, "Unexpected element kind")
+		}
 	}
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
 		return CGSize(width: view.frame.width, height: 340)
+	}
+
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+		return CGSize(width: view.frame.width, height: 200)
 	}
 
 	override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
